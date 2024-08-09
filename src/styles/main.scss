@@ -4,7 +4,7 @@
 
 /* #region page */
 body {
-  background: $c-gray;
+  background-color: #eef7ff;
 }
 
 body,
@@ -24,9 +24,9 @@ h2 {
 
 /* #region header */
 .header {
+  box-sizing: border-box;
   min-height: 670px;
   padding: 16px 16px 40px;
-  box-sizing: border-box;
 }
 
 .header__top {
@@ -66,6 +66,35 @@ h2 {
 
 /* #endregion */
 
+/* #region menu */
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 16px;
+  background-color: #eef7ff;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu:target {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* #endregion */
+
 /* #region icon */
 .icon {
   display: block;
@@ -76,6 +105,10 @@ h2 {
 
 .icon--menu {
   background-image: url(/src/images/icons/icon-menu.png);
+}
+
+.icon--close {
+  background-image: url(/src/images/icons/icon-close.png);
 }
 
 .icon--cookie {
@@ -90,6 +123,7 @@ h2 {
   height: 56px;
   border-radius: 32px;
   border: 2px solid #f9512e;
+  background-color: transparent;
 
   display: flex;
   justify-content: center;
