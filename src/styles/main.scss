@@ -1,23 +1,48 @@
+/* #region imports */
 @import 'utils';
 @import 'fonts';
 @import 'typography';
 
-/* #region page */
-body {
-  background-color: #eef7ff;
-}
+/* #endregion */
 
-body,
+/* #region page */
 p,
 h1,
 h2 {
   margin: 0;
+}
 
+h2 {
+  font-weight: 400;
+}
+
+.page {
   font-family: Inter, sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   color: #1c1a26;
+}
+
+.page__body {
+  background-color: #eef7ff;
+
+  margin: 0;
+}
+
+.page__menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page__menu:target {
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* #endregion */
@@ -55,6 +80,7 @@ h2 {
 }
 
 .header__title {
+  font-weight: 400;
   font-size: 64px;
   line-height: 54.4px;
   letter-spacing: -0.05em;
@@ -68,23 +94,10 @@ h2 {
 
 /* #region menu */
 .menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-
   box-sizing: border-box;
   min-height: 100vh;
   padding: 16px;
   background-color: #eef7ff;
-
-  opacity: 0;
-  pointer-events: none;
-}
-
-.menu:target {
-  opacity: 1;
-  pointer-events: all;
 }
 
 .menu__top {
@@ -134,6 +147,7 @@ h2 {
 }
 
 .button__label {
+  font-family: Inter, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
