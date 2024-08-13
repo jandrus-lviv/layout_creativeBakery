@@ -1,0 +1,19 @@
+.contact-us {
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #f9512e;
+  font-weight: 500;
+}
+
+.contact-us__label {
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
